@@ -299,6 +299,10 @@ body {
 
 .adress {
     margin-top: 20px;
+    font-size: 40px;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .info {
@@ -306,6 +310,7 @@ body {
     justify-content: space-between;
     margin-top: 10px;
     width: 200px;
+    
 }
 
 .kick-off {
