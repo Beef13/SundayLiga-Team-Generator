@@ -312,12 +312,19 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-    width: 200px;
+    width: 220px;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
     
 }
 
 .kick-off {
-    color: #eb6060;
+    color: #eb6060;font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
 }
 
 .lineups-wrapper {
