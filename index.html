@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundayliga | Team Generator</title>
+
+    <!-- STYLES LINK -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- FONT LINKS -->
+    <!-- ROBOTO MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- BUNGEE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <!-- RUBIK DIRT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="./images/SLF.png" alt="slf logo" class="slf-logo">
+        <img src="./images/version.png" alt="version" class="version">
+    </div>
+
+    <!-- TOP BAR / BUTTONS -->
+    <div class="header2">
+
+        <!-- NUMBER OF TEAMS -->
+        <div class="number-of-teams-cont">
+            <p class="number-of-teams-txt">Number of teams:</p>
+            <select class="dropdown" id="number-of-teams">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <!-- GENERATE BUTTON WRAPPER -->
+        <div class="gen-butt-wrap">
+            <!-- LEFT FIELD -->
+            <div class="draw-title-cont">
+                <p>MatchWeek # - </p>
+                <input type="text" id="draw-title-input" placeholder="Week #">
+            </div>
+            <!-- RIGHT BUTTON -->
+            <div class="gen-butt-wrap-right">
+                <button class="gen-buttons" id="skill-toggle">Toggle Skill</button>
+                <button class="gen-buttons" id="gen-button">Generate</button>
+                <button class="gen-buttons" id="reset-button">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY CONTENT -->
+    <div class="body-content">
+        <!-- LEFT SIDE -->
+        <div class="input-names-cont">
+            
+            <!-- INPUT NAMES CONTAINER -->
+            <div class="input-names-wrapper">
+                <!-- INPUT TITLES -->
+                <div class="input-titles">
+                    <p>Player name</p>
+                    <p>Skill</p>
+                </div>
+                <div class="div-line"></div>
+            
+                <!-- INPUTS CONTAINER -->
+                <div id="inputs-container">
+                    <!-- Inputs will be dynamically generated here -->
+                </div>
+            
+                <!-- ADD / SUB BUTTONS -->
+                <div class="add-sub-wrap">
+                    <button class="square-butt" id="add-butt">+</button>
+                    <button class="square-butt" id="subb-butt">-</button>
+                </div>
+            </div>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+            <!-- LINEUP CONTAINER -->
+            <div class="lineups-cont">
+                <h1 class="adress">Sportlink Vermont South</h1>
+                <div class="info">
+                    <h2 id="match-week">MW #</h2>
+                    <h2 class="kick-off">K.O 4PM!</h2>
+                </div>
+                <!-- LINEUPS WRAPPER -->
+                <div class="lineups-wrapper">
+                    <!-- TOP ROW -->
+                    <div class="top-row">
+                        <div class="team">
+                            <img src="./images/Azzuri-01.png" alt="" class="logos" id="cycle-image1">
+                            <p id="team-rating">TR:</p>
+                            <div class="team-names">
+                                <!-- ADD NAMES DYNAMICALLY -->
+                            </div>
+                        </div>
+                        <div class="team">
+                            <img src="./images/il rosso-01.png" alt="" class="logos" id="cycle-image2">
+                            <p id="team-rating">TR:</p>
+                            <div class="team-names">
+                                <!-- ADD NAMES DYNAMICALLY -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BOTTOM ROW -->
+                    <div class="bottom-row">
+                        <div class="team">
+                            <img src="./images/neri-01.png" alt="" class="logos" id="cycle-image3">
+                            <p id="team-rating">TR:</p>
+                            <div class="team-names">
+                                <!-- ADD NAMES DYNAMICALLY -->
+                            </div>
+                        </div>
+                        <div class="team">
+                            <img src="./images/los blancos-01.png" alt="" class="logos" id="cycle-image4">
+                            <p id="team-rating">TR:</p>
+                            <div class="team-names">
+                                <!-- ADD NAMES DYNAMICALLY -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sponsors">
+                        <img src="./images/sample2.png" alt="vps logo" id="vps">
+                        <div class="sponsor-line"></div>
+                        <img src="./images/ENZED for vid-01.png" alt="enzed logo" id="enzed">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">Made by SundayLiga for SundayLiga -  2024 📈</p>
+    </footer>
+    
+    <script src="index.js"></script>
+</body>
+</html>

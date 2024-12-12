@@ -1,0 +1,473 @@
+/* BODY & UNIVERSALS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    /* background-color: rgb(39, 39, 39); */
+    background-color: #262626;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c2c2c' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+
+.dropdown {
+    height: 30px;
+    width: 45px;
+    padding-left: 7px;
+    border-radius: 8px;
+    text-align: center;
+    border: solid 1px grey;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+
+.dropdown:hover {
+    background: #b4b4b4;
+}
+
+.dropdown-skill {
+    height: 37px;
+    width: 45px;
+    padding-left: 7px;
+    border-radius: 8px;
+    text-align: center;
+    border: solid 1px rgb(101, 101, 101);
+    color: white;
+    /* background: #686868; */
+    background: none;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+
+.dropdown-skill:hover {
+    background: #b4b4b4;
+}
+
+/* HEADER */
+
+.header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1050px;
+    height: 30px;
+    /* background-color: red; */
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 1050px;
+    height: 60px;
+    /* background-color: red; */
+}
+
+.slf-logo {
+    height: 30px;
+}
+
+.version {
+    height: 30px;
+}
+
+/* MAIN BODY CONTENT */
+
+.body-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    width: 1050px;
+    height: 1060px;
+    /* background-color: red; */
+}
+
+/* LEFT SIDE */
+
+.input-names-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 400px;
+    /* background-color: green; */
+}
+
+.number-of-teams-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 298px;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    background-color: #353535;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(88, 88, 88);
+}
+
+.input-names-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #353535;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(88, 88, 88);
+}
+
+.input-titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #5b5b5b;
+}
+
+
+/* INPUTS */
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.player-input-box {
+    height: 35px; 
+    width: 150px;
+    padding-left: 10px;
+    border-radius: 8px; 
+    font-size: 15px;
+    border: solid 1px grey;  
+}
+
+#delete-name {
+    height: 37px;
+    width: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background: #5b5b5b;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    /* background-color: purple; */
+}
+
+/* GENERATE BUTTONS WRAPPER */
+
+.gen-butt-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    height: 55px;
+    border-radius: 10px;
+    /* background-color: #464646; */
+}
+
+.draw-title-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    border-radius: 10px;
+    /* background: #464646; */
+    box-sizing: border-box;
+}
+
+#draw-title-input {
+    height: 35px;
+    width: 140px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    border: solid 1px grey;
+    box-sizing: border-box;
+}
+
+.gen-buttons {
+    height: 35px;
+    width: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    color: white;
+    background: #57c557;
+    cursor: pointer;
+}
+
+.gen-butt-wrap-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+}
+
+#skill-toggle {
+    background: rgb(73, 148, 234);
+    transition: background 0.1s ease-in-out, font-weight 0.1s ease-in-out;
+}
+
+#skill-toggle:hover {
+    background: #2d6cb4;
+    font-weight: 1000;
+}
+
+#gen-button {
+    transition: background 0.1s ease-in-out, font-weight 0.1s ease-in-out;
+}
+
+#gen-button:hover {
+    background: #349934;
+    font-weight: 1000;
+}
+
+#reset-button {
+    background: #eb6060;
+    transition: background 0.1s ease-in-out, font-weight 0.1s ease-in-out;
+}
+
+#reset-button:hover {
+    background: #c83333;
+    font-weight: 1000;
+}
+
+/* LINEUPS CONTAINER */
+
+.lineups-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #353535;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(88, 88, 88);
+}
+
+.adress {
+    margin-top: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.kick-off {
+    color: #eb6060;
+}
+
+.lineups-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+    padding-left: 29px;
+    padding-right: 29px;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    box-sizing: border-box;
+    
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    height: 400px;
+    /* background-color: blue; */
+}
+
+.team {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(88, 88, 88);
+    background-color: #3a3a3a;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.251);
+}
+
+.team p {
+    font-size: 20px;
+
+}
+
+.team-names {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -13px;
+    gap: 10px;
+    font-size: 35px;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#team-rating {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    background-color: #8b8b8b;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    z-index: 3;
+}
+
+/* LOGOS */
+
+.logos {
+    position: relative;
+    top: -30px;
+    z-index: 1;
+    width: 150px;
+    cursor: pointer;
+}
+
+
+
+/* ADD SUB BUTTONS */
+
+.add-sub-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.square-butt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    width: 40px;
+    padding-bottom: 1px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background: #585858;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+
+.square-butt:hover {
+    background: #b4b4b4;
+}
+
+#add-butt {
+    background: #57c557;
+    transition: background 0.1s ease-in-out;
+}
+
+#add-butt:hover {
+    background: #349934;
+}
+
+#subb-butt {
+    background: #eb6060;
+    transition: background 0.1s ease-in-out;
+}
+
+#subb-butt:hover {
+    background: #c83333;
+}
+
+/* SPONSORS */
+
+.sponsors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1102px;  
+    gap: 50px;
+    width: 700px;
+}
+
+#vps {
+    width: auto;
+    height: 80px
+}
+
+.sponsor-line {
+    width: 1.5px;
+    height: 50px;
+    background-color: rgb(115, 115, 115);
+    border-radius: 10px;
+}
+
+#enzed {
+    width: auto;
+    height: 70px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 30px;
+    color: grey;
+}
