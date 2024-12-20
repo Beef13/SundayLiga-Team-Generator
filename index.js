@@ -173,8 +173,9 @@ function generateTeams() {
             // Update team rating and names
             teamRating.textContent = showSkill ? `TR: ${team.totalSkill}` : "";
             teamNames.innerHTML = team.players
-                .map(player => (showSkill ? `${player.name} (${player.skill})` : player.name))
+                .map(player => (showSkill ? `${player.name}` : player.name))
                 .join("<br>");
+                // (${player.skill}) insert into .map if needed
         } else {
             // Reset team if no data exists
             if (teamRating) {
@@ -195,13 +196,31 @@ function generateTeams() {
 // Toggle skill and total rating visibility
 function toggleSkillVisibility() {
     showSkill = !showSkill; // Toggle the visibility state
-    generateTeams(); // Refresh teams with the new visibility setting
 
-    // Set the background of team ratings to none
+    // Update player names to show/hide skill ratings
+    teamElements.forEach(teamElement => {
+        const teamNames = teamElement.querySelector(".team-names");
+        if (teamNames) {
+            const playerElements = Array.from(teamNames.children); // Each player is a child element
+
+            playerElements.forEach(playerElement => {
+                const skillPattern = /\((\d+)\)$/; // Regex to find the skill in "(X)"
+                const skillMatch = playerElement.textContent.match(skillPattern);
+                const playerName = playerElement.textContent.replace(skillPattern, "").trim();
+
+                // Toggle between "Name (Skill)" and "Name"
+                playerElement.textContent = showSkill && skillMatch
+                    ? `${playerName} (${skillMatch[1]})`
+                    : playerName;
+            });
+        }
+    });
+
+    // Update team ratings visibility
     teamElements.forEach(teamElement => {
         const teamRating = teamElement.querySelector("#team-rating");
         if (teamRating) {
-            teamRating.style.background = showSkill ? "" : "none"; // Reset or remove background
+            teamRating.style.display = showSkill ? "block" : "none"; // Show or hide team ratings
         }
     });
 }
@@ -211,6 +230,7 @@ addButton.addEventListener("click", addInputRow);
 subtractButton.addEventListener("click", removeLastInputRow);
 genButton.addEventListener("click", generateTeams);
 skillToggle.addEventListener("click", toggleSkillVisibility);
+// skillToggle.addEventListener("click", toggleSkillVisibility);
 numberOfTeamsDropdown.addEventListener("change", () => {
     const numberOfTeams = parseInt(numberOfTeamsDropdown.value);
     adjustTeamLayout(numberOfTeams);
